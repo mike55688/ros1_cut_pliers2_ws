@@ -1,0 +1,16 @@
+#goal definition
+string command
+int64 layer
+# ActionCode-->[10]:shelf, [20]:up/down, [21]:forward/backward, [22]:tile, [30]:move
+int64 ActionCode
+int64 ShelfParameter
+float64 UpDownPosition
+float64 ForrwardBackwardPosition
+float64 TilePosition
+float64 MovePosition
+---
+#result definition
+string result
+---
+#feedback
+string feedback

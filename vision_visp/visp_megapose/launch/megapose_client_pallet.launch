@@ -1,0 +1,47 @@
+<launch>
+  <!-- 啟動 RealSense 相機 -->
+  <!-- <include file="$(find realsense2_camera)/launch/rs_camera.launch"> -->
+    <!-- 設定 RGB 相機 -->
+    <!-- <arg name="color_width" value="848"/>
+    <arg name="color_height" value="480"/>
+    <arg name="enable_color" value="true"/> -->
+    
+    <!-- 設定 深度相機 -->
+    <!-- <arg name="depth_width" value="848"/>
+    <arg name="depth_height" value="480"/>
+    <arg name="enable_depth" value="true"/> -->
+
+    <!-- 啟用同步與對齊 -->
+    <!-- <arg name="enable_sync" value="true"/>
+    <arg name="align_depth" value="true"/> 
+  </include>-->
+  <!-- 啟動 megapose_client 節點 -->
+  <node pkg="visp_megapose" type="megapose_client" name="megapose_client_pallet" output="screen">
+    <!-- 設定影像主題與相機資訊主題 -->
+    <param name="image_topic" value="/camera/color/image_raw"/>
+    <param name="camera_info_topic" value="/camera/color/camera_info"/>
+    <!-- (True or False) -->
+    <param name="use_depth" value="False"/>
+    <param name="depth_topic" value="/camera/aligned_depth_to_color/image_raw"/>
+    <param name="depth_info_topic" value="/camera/aligned_depth_to_color/camera_info"/>
+    <param name="camera_tf" value="camera_color_optical_frame"/>
+    <!-- 選擇檢測方法 (CLICK 或 DNN) -->
+    <param name="detector_method" value="DNN"/>  
+    <!-- 設定模型檔案路徑 (yolov7 onnx 格式) -->
+    <param name="detector_model_path" value="$(find visp_megapose)/data/pallet.onnx"/>
+    <!-- 設定 DNN 檢測物體名稱 -->
+    <param name="object_name" value="pallet"/>
+    <!-- 啟用或禁用渲染服務(True or False) -->
+    <param name="render_enable" value="False"/>
+    <!-- 啟用或禁用 UI(True or False) -->
+    <param name="UI_enable" value="True"/>
+    <!-- 設定檢測模式(Auto 或 Manual) -->
+    <param name="detection_mode" value="Auto"/>
+    <!-- 設定檢測允許主題 -->
+    <!-- <param name="detection_allowed_topic" value="/pallet_detection"/> -->
+    <!-- 設定moving average filter -->
+    <param name="buffer_size" value="5"/>
+    <!-- 設定是否使用 bounding box (True or False)-->
+    <param name="bounding_box" value="True"/> 
+  </node>
+</launch>

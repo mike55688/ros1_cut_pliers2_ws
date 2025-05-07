@@ -1,0 +1,2 @@
+bool detection_allowed
+float32 layer

@@ -1,0 +1,29 @@
+<launch>
+<node pkg="forklift_server" type="ctrl_server_megapose_differential_drive.py" name="ctrl_server_megapose" output="screen">
+    <rosparam param="command">
+    [
+        <!-- ['MoveBase', 'P1'], -->
+        <!-- ['TopologyMap', 'P1'], -->
+
+        ['PBVS', 'fruit_docking', 0.0],
+
+    ] 
+    </rosparam>
+    <rosparam param= "waypoints">
+    {    
+        "P1": [0.791, 0.039, -0.013, 1.000],
+        "P2": [3.080, 0.291, -0.697, 0.717],
+        "P3": [3.176, -3.770, -0.716, 0.698]
+    }
+    </rosparam>
+</node>
+</launch>
+
+<!-- ['PBVS', 'parking_forkcamera', layer_dist], 
+['PBVS', 'raise_pallet', layer_dist],
+['PBVS', 'drop_pallet', layer_dist],
+['PBVS', 'parking_bodycamera', layer_dist],
+['odom', 'odom_front', layer_dist],
+['odom', 'odom_turn', layer_dist] , +逆時針
+['TopologyMap', 'P?']
+['MoveBase', 'P?']-->

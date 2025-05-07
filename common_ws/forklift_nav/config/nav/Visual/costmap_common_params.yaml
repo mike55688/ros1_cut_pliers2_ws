@@ -1,0 +1,64 @@
+# footprint: [ [-0.185, -0.12], [-0.20, 0.02], [-0.10, 0.38], [0.10, 0.38], [0.20, 0.02], [0.185, -0.12] ]
+
+footprint: [ [0.36,0.15],[0.36,-0.15],[0.0,-0.2],[-0.15,-0.17],[-0.35,-0.17],[-0.35,0.17],[-0.15,0.17],[0.0,0.2]]
+
+# footprint: [[1.75,-0.575],[1.75,0.575],[-0.25,0.575],[-0.25,0.3],[-0.75,0.3],[-0.75,-0.3],[-0.25,-0.3],[-0.25,-0.575]]
+
+map_type: costmap
+
+obstacle_layer:
+  enabled: true
+  max_obstacle_height: 3.0
+#max_obstacle_height必須比機器人還高
+
+  min_obstacle_height: 0.05
+  obstacle_range: 3.0
+  raytrace_range: 3.5
+  inflation_radius: 0.1
+  combination_method: 1
+  observation_sources: scan
+  track_unknown_space: true
+
+  origin_z: 0.0
+  z_resolution: 0.2
+  z_voxels: 2
+  unknown_threshold: 15
+  mark_threshold: 0
+  publish_voxel_map: false
+  footprint_clearing_enabled: true
+
+
+  scan:
+    data_type: LaserScan
+    topic: /scans
+    marking: true
+    clearing: true
+    expected_update_rate: 0
+    min_obstacle_height: 0.20
+    max_obstacle_height: 2.0
+
+  # 3dlidar_sensor:
+  #   data_type: PointCloud2
+  #   topic: /velodyne_points
+  #   marking: true
+  #   clearing: true
+  #   min_obstacle_height: 0.05
+  #   max_obstacle_height: 3.0
+  #   observation_persistence: 0.0
+
+inflation_layer:
+  enabled:              true
+  cost_scaling_factor:  10.0  #10.0
+  inflation_radius:     0.7  #0.25
+
+static_layer:
+  enabled:              true
+  map_topic:            "/map"
+
+# sonar_layer:
+#  enabled:            true
+#  clear_threshold:    0.6
+#  mark_threshold:     0.8
+#  topics: ["/sonar0", "/sonar1", "/sonar2", "/sonar3"]
+#  clear_on_max_reading: true
+

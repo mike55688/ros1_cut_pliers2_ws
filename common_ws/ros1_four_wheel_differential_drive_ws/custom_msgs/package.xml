@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>custom_msgs</name>
+  <version>0.0.0</version>
+  <description>Custom messages for controlling the robot</description>
+
+  <maintainer email="m11312045@gemail.yuntech.edu.tw">esoc</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- ROS1 相依性 -->
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>std_msgs</build_depend>
+
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+
+  <export>
+  </export>
+</package>

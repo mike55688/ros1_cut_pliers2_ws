@@ -1,0 +1,9 @@
+<launch>
+    <!-- 全域設定 topic 參數 -->
+    <param name="cmd_topic" value="/cmd_cut_pliers"/>
+
+    <!-- 啟動 cut_pliers_controller 節點 -->
+    <node name="cut_pliers_controller" pkg="cut_pliers_controller" type="test_node" output="screen">
+        <param name="cmd_topic" value="/cmd_cut_pliers"/>
+    </node>
+</launch>

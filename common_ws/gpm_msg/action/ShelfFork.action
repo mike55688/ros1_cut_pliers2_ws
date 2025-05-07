@@ -1,0 +1,15 @@
+#goal         
+# ActionCode # 參考forklifr server
+int64 ActionCode
+int64 ShelfParameter
+float64 UpDownPosition
+float64 ForrwardBackwardPosition
+float64 TilePosition
+float64 MovePosition
+---
+#result
+int64 ReturnCode
+actionlib_msgs/GoalStatus GoalStatus
+---
+#feedback
+float64 percentage

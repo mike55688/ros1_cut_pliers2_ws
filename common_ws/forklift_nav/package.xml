@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>forklift_nav</name>
+  <version>0.0.0</version>
+  <description>Forklift navigation parameter</description>
+  <license>MIT License</license>
+  <maintainer email="laiyichengyuntech@gmail.com">laiyicheng</maintainer>
+
+  <!-- Add any dependencies your package might have here -->
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <exec_depend>roscpp</exec_depend>
+
+  <!-- Add any other dependencies as needed -->
+
+  <export>
+    <build_type>catkin</build_type>
+  </export>
+</package>

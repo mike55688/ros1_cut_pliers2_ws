@@ -1,0 +1,14 @@
+#goal         
+string target_name
+# This contains the position of a point in free space
+geometry_msgs/Pose target_pose
+# This represents an orientation in free space in quaternion form.
+#geometry_msgs/Quaternion target_quaternion 
+---
+#result
+int64 ReturnCode
+actionlib_msgs/GoalStatus GoalStatus
+---
+#feedback
+float64 percentage
+geometry_msgs/Pose c_pos

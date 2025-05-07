@@ -1,0 +1,1 @@
+bool Is_good_lock

@@ -1,0 +1,7 @@
+float64 leftdistance
+float64 rightdistance
+bool Is_left_on_pos_clear
+bool Is_right_on_pos_clear
+bool Is_clear_to_load
+bool Is_clear_to_forward_fork
+bool Is_good_lock

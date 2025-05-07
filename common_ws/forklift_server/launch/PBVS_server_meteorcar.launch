@@ -1,0 +1,49 @@
+<launch>
+<node pkg="forklift_server" type="PBVS_server_minicar.py" name="PBVS_server" output="screen">
+    
+    <!--Subscriber Topic setting/-->
+    <param name="odom" value="/odom" /><!--里程計 Topic（map -> base_link, 是tf相對關係, 非輪式里程計）/-->
+    <param name="tag_detections_up" value="/tag_detections_up" /><!--車體相機對位AprilTag Topic/-->
+    <param name="tag_detections_down" value="/tag_detections_down" /><!--牙叉相機對位AprilTag Topic/-->
+    <param name="forkpos" value="/forklift_pose" /><!--牙叉編碼器回傳Topic/-->
+
+    <!--bodycamera parking setting-->
+    <param name="bodycamera_tag_offset_x" type="double" value = "-0.03" /><!--對位目標點與tag的左右偏移量/-->
+    <param name="bodycamera_parking_fork_init" type="double" value = "-1.0" /><!--車體相機對位初始牙叉高度-->
+    <param name="bodycamera_ChangingDirection_threshold" type="double" value = "0.01" />  <!--正對Tag(atan2(y, x) <= threshold)/-->
+    <param name="bodycamera_parking_stop" type="double" value = "0.5" />  <!--車體相機對位停止距離/-->
+    <param name="bodycamera_Changingtheta_threshold" type="double" value = "0.025" />  <!--平行Tag(theta <= threshold)/-->
+    <param name="bodycamera_decide_distance" type="double" value = "0.025" />  <!--將相機平行Tag之後，左右y距離誤差幾公尺內可以將牙叉插進去，如果不行的話就後退重新對位/-->
+    <param name="bodycamera_back_distance" type="double" value = "1.10" />  <!--重新對位時後退的距離/-->
+
+    <!--forkcamera parking setting/-->
+    <param name="forkcamera_parking_fork_layer1" type="double" value = "0.0" /><!--牙叉相機對位初始牙叉高度, 為了將牙叉相機與棧板高度一致/-->
+    <param name="forkcamera_parking_fork_layer2" type="double" value = "0.3" /><!--牙叉相機對位初始牙叉高度, 為了將牙叉相機與棧板高度一致/-->
+    <param name="forkcamera_tag_offset_x" type="double" value = "0.0" /><!--對位目標點與tag的左右偏移量/-->
+    <param name="forkcamera_ChangingDirection_threshold" type="double" value = "0.01" />  <!--正對Tag(atan2(y, x) <= threshold) threshold/-->
+    <param name="forkcamera_parking_stop" type="double" value = "0.34" /><!--牙叉相機對位停止距離/-->
+    <param name="forkcamera_Changingtheta_threshold" type="double" value = "0.025" />  <!--平行Tag(theta <= threshold)/-->
+    <param name="forkcamera_decide_distance" type="double" value = "0.025"/>  <!--將相機平行Tag之後，左右y距離誤差幾公尺內可以將牙叉插進去，如果不行的話就後退重新對位/-->
+    <param name="forkcamera_back_distance" type="double" value = "1.1" />  <!--重新對位時後退的距離/-->
+
+    <!--Raise the pallet setting/-->
+    <param name="raise_pallet_fork_init_layer1" type="double" value = "0.0" /><!--插起棧板的初始牙叉高度/-->
+    <param name="raise_pallet_fork_init_layer2" type="double" value = "0.39" /><!--插起棧板的初始牙叉高度/-->
+    <param name="raise_pallet_dead_reckoning_dist" type="double" value = "-0.28" /><!--直線移動到距離Tag多少公尺的地方/-->
+    <param name="raise_pallet_fork_forward_distance" type="double" value = "0.655" /><!--牙叉前伸的距離/-->
+    <param name="raise_pallet_raise_height_layer1" type="double" value = "0.12" /><!--牙叉叉起棧板的高度/-->
+    <param name="raise_pallet_raise_height_layer2" type="double" value = "0.5" /><!--牙叉叉起棧板的高度/-->
+    <param name="raise_pallet_back_distance" type="double" value = "0.9" /><!--插起棧板後，後退距離/-->
+    <param name="raise_pallet_navigation_helght" type="double" value = "0.12" /><!--完成插起棧板動作後，接續下一個動作時牙叉高度/-->
+
+    <!--Drop the pallet setting/-->
+    <param name="drop_pallet_fork_init_layer1" type="double" value = "0.12" /><!--放下棧板的初始牙叉高度/-->
+    <param name="drop_pallet_fork_init_layer2" type="double" value = "0.5" /><!--放下棧板的初始牙叉高度/-->
+    <param name="drop_pallet_dead_reckoning_dist" type="double" value = "-0.25" /><!--使用里程計計算直走(正值)或後退(負值)距離，因為牙叉升起有可能會擋到Tag，因此改用里程計計算/-->
+    <param name="drop_pallet_fork_forward_distance" type="double" value = "0.70" /><!--牙叉前伸的距離/-->
+    <param name="drop_pallet_drop_height_layer1" type="double" value = "0.0" /><!--牙叉放下棧板的高度/-->
+    <param name="drop_pallet_drop_height_layer2" type="double" value = "0.39" /><!--牙叉放下棧板的高度/-->
+    <param name="drop_pallet_back_distance" type="double" value = "0.9" /><!--放下棧板後，後退距離/-->
+    <param name="drop_pallet_navigation_helght" type="double" value = "0.0" /><!--完成放置棧板動作後，接續下一個動作時牙叉高度/-->
+</node>
+</launch>

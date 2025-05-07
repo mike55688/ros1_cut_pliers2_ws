@@ -1,0 +1,14 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/ericlai/visual_ws/devel/lib/python3/dist-packages",
+        "/home/ericlai/common_ws/devel/lib/python3/dist-packages",
+        "/home/ericlai/3dlidar_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/ericlai/visual_ws/devel/lib/python3/dist-packages",
+        "/home/ericlai/common_ws/devel/lib/python3/dist-packages",
+        "/home/ericlai/3dlidar_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ]
+}

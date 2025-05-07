@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>visp_megapose</name>
+  <version>0.0.0</version>
+  <description>
+    TODO: Package description for ROS1 version.
+  </description>
+
+  <maintainer email="Fabien.Spindler@inria.fr">Fabien Spindler</maintainer>
+  <license>GPLv2</license>
+
+  <url type="website">https://visp-doc.inria.fr/doxygen/visp-daily/tutorial-tracking-megapose.html</url>
+
+  <!-- Build tool dependencies -->
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- Build dependencies -->
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>message_filters</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>image_transport</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>visp</build_depend>
+  <build_depend>visp3</build_depend>
+  <build_depend>visp_bridge</build_depend>
+  <build_depend>cv_bridge</build_depend>
+  <build_depend>message_generation</build_depend>
+  <build_depend>forklift_server</build_depend>
+  
+  <!-- Runtime dependencies -->
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>message_filters</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>image_transport</exec_depend>
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>visp</exec_depend>
+  <exec_depend>visp3</exec_depend>
+  <exec_depend>visp_bridge</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>forklift_server</exec_depend>
+
+  <export>
+    <build_type>catkin</build_type>
+  </export>
+</package>

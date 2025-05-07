@@ -1,0 +1,55 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/ericlai/common_ws/devel/include/**",
+        "/home/ericlai/gpm_project/devel/include/**",
+        "/home/ericlai/catkin_ws/devel/include/**",
+        "/home/ericlai/test_ws/devel/include/**",
+        "/home/ericlai/3dlidar_ws/devel/include/**",
+        "/home/ericlai/visual_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/ericlai/test_ws/src/SC-A-LOAM/include/**",
+        "/home/ericlai/common_ws/src/apriltag_ros/apriltag_ros/include/**",
+        "/home/ericlai/common_ws/src/car_controller/include/**",
+        "/home/ericlai/gpm_project/src/src/car_motion_base/include/**",
+        "/home/ericlai/3dlidar_ws/src/fast_gicp/include/**",
+        "/home/ericlai/3dlidar_ws/src/hdl_global_localization/include/**",
+        "/home/ericlai/3dlidar_ws/src/hdl_graph_slam/include/**",
+        "/home/ericlai/3dlidar_ws/src/hdl_localization/include/**",
+        "/home/ericlai/test_ws/src/ros-ngimu/src/imu_calib/include/**",
+        "/home/ericlai/catkin_ws/src/imu_tools/imu_complementary_filter/include/**",
+        "/home/ericlai/catkin_ws/src/imu_tools/imu_filter_madgwick/include/**",
+        "/home/ericlai/3dlidar_ws/src/interactive_slam/include/**",
+        "/home/ericlai/test_ws/src/SC-LeGO-LOAM/SC-LeGO-LOAM/LeGO-LOAM/include/**",
+        "/home/ericlai/3dlidar_ws/src/lt-mapper/ltslam/include/**",
+        "/home/ericlai/3dlidar_ws/src/map_merge_3d/map_merge_3d/include/**",
+        "/home/ericlai/catkin_ws/src/MeteorForklift/meteor_forklift/include/**",
+        "/home/ericlai/test_ws/src/mpc_local_planner/mpc_local_planner/include/**",
+        "/home/ericlai/3dlidar_ws/src/ndt_omp/include/**",
+        "/home/ericlai/common_ws/src/realsense-ros/realsense2_camera/include/**",
+        "/home/ericlai/3dlidar_ws/src/lt-mapper/ltremovert/include/**",
+        "/home/ericlai/test_ws/src/ros-ngimu/src/ros-ngimu/include/**",
+        "/home/ericlai/visual_ws/src/rtabmap_ros-0.20.16-noetic/include/**",
+        "/home/ericlai/gpm_project/src/src/safety_plc/include/**",
+        "/home/ericlai/catkin_ws/src/subproject4/include/**",
+        "/home/ericlai/gpm_project/src/src/testpkg/include/**",
+        "/home/ericlai/3dlidar_ws/src/velodyne/velodyne_driver/include/**",
+        "/home/ericlai/3dlidar_ws/src/velodyne/velodyne_laserscan/include/**",
+        "/home/ericlai/3dlidar_ws/src/velodyne/velodyne_pcl/include/**",
+        "/home/ericlai/3dlidar_ws/src/velodyne/velodyne_pointcloud/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

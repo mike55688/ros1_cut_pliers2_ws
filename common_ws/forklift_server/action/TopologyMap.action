@@ -1,0 +1,10 @@
+#goal definition
+string goal
+string target_name
+geometry_msgs/Pose target_pose
+---
+#result definition
+string result
+---
+#feedback
+string feedback

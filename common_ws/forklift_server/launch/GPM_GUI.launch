@@ -1,0 +1,4 @@
+<launch>
+<node pkg="forklift_server" type="GPM_GUI.py" name="GPM_GUI" output="screen">
+</node>
+</launch>

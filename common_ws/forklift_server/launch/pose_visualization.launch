@@ -1,0 +1,9 @@
+<launch>
+  <node pkg="forklift_server" type="pose_visualization.py" name="pose_visualization" output="screen">
+    <!-- 訂閱主題參數設定 -->
+    <param name="odom_topic" value="/wheel_odom" /> <!-- 里程計主題 -->
+    <param name="apriltag_topic" value="/apriltag_poses" /> <!-- AprilTag 主題 -->
+    <param name="pallet_topic" value="/red_apple" /> <!-- 棧板或目標主題 -->
+    <param name="forkpose_topic" value="/forklift_pose" /> <!-- 叉子編碼器主題 -->
+  </node>
+</launch>

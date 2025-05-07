@@ -1,0 +1,20 @@
+<launch>
+<node pkg="forklift_server" type="ctrl_server.py" name="ctrl_server" output="screen">
+    <!-- :HACK: 要改成可以設定層數的（scripts/PBVS_server_minicar.py） -->
+    <rosparam param="command">
+    [
+        ['TopologyMap', 'P2'],
+        ['PBVS', 'parking_bodycamera'], 
+        ['PBVS', 'raise_pallet'],
+        ['TopologyMap', 'P6'],
+        ['PBVS', 'parking_bodycamera'],
+        ['PBVS', 'drop_pallet'], 
+        ['PBVS', 'parking_forkcamera'],
+        ['PBVS', 'raise_pallet'],
+        ['TopologyMap', 'P2'],
+        ['PBVS', 'parking_bodycamera'],
+        ['PBVS', 'drop_pallet']
+    ]
+    </rosparam>
+</node>
+</launch>

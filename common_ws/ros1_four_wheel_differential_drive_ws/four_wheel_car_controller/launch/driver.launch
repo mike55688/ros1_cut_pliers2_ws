@@ -1,0 +1,7 @@
+<launch>
+    <node name="listener" pkg="four_wheel_car_controller" type="car_controller" output="screen">
+        <param name="rate" type="int" value="100"/>  <!-- 執行頻率 -->
+        <param name="topic_cmd_vel" type="str" value="/cmd_vel"/>  <!--訂閱速度命令-->
+        <param name="topic_odom" value="/wheel_odom" /> <!--車輪里程計-->
+    </node>
+</launch>

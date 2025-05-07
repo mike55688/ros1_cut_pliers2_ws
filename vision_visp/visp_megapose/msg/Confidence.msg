@@ -1,0 +1,2 @@
+float64 object_confidence
+bool model_detection

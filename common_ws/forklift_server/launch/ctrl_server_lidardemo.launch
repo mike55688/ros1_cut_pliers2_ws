@@ -1,0 +1,17 @@
+<launch>
+<node pkg="forklift_server" type="ctrl_server.py" name="ctrl_server" output="screen">
+    <rosparam param="command">
+    [
+        ['TopologyMap', 'Place3Before'],<!--導航到Place3Before/-->
+        ['PBVS', 'parking_bodycamera'], <!--使用牙叉相機對位貨價/-->
+        ['PBVS', 'drop_pallet'],<!--放下棧板/-->    
+        ['TopologyMap', 'Pick3Before'],<!--導航到Pick3Before/-->
+        ['PBVS', 'parking_forkcamera'],<!--使用牙叉相機對位棧板/-->
+        ['PBVS', 'raise_pallet'],<!--叉起棧板/-->
+        ['TopologyMap', 'Place3Before'],<!--導航到Place3Before/-->
+        ['PBVS', 'parking_bodycamera'], <!--使用牙叉相機對位貨價/-->
+        ['PBVS', 'drop_pallet']<!--放下棧板/-->   
+    ]
+    </rosparam>
+</node>
+</launch>
